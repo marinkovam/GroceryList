@@ -1,13 +1,4 @@
 package com.example.grocerylist;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.solver.widgets.Rectangle;
-import androidx.core.app.NotificationCompat;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.res.ResourcesCompat;
-
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
@@ -18,13 +9,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.SQLException;
-import android.database.sqlite.SQLiteConstraintException;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.Paint;
-import android.graphics.PixelFormat;
-import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.icu.text.DateFormat;
@@ -44,19 +29,14 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.SearchView;
-import android.widget.SimpleExpandableListAdapter;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-
-import java.text.FieldPosition;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 import java.text.ParseException;
-import java.text.ParsePosition;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -77,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     String isoDatePattern = "yyyy-MM-dd";
 
     String DUPLICATE_ITEM_ERROR_MESSAGE = "This item already exists.";
-
     String UNIQUE_CONSTRAINT_FAILED_ERROR_MESSAGE = "UNIQUE constraint failed";
     String NO_RESULTS_FOUND = "No results found";
     String INVALID_ITEM_NAME = " is an invalid item name, item should not be empty";
@@ -86,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
     String WANT_TO_DELETE_ALL_THE_ITEMS = "Are you sure you want to delete all the items?";
     String YES = "Yes";
     String NO = "NO";
-
     String ITEM_NAME_STR = "Item name";
     String EXPIRY_DATE_STR = "Expiry date";
     String WHEREABOUTS_STR = "Whereabouts";
@@ -116,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeSpinners() {
         spinnerSortBy = (Spinner) findViewById(R.id.spinnerSortBy);
-
         spinnerSortBy.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -165,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
         int columnCount = cursor.getColumnCount();
 
         cursor.moveToFirst();
-
         int itemIdIndex          = cursor.getColumnIndex(dataManager.TABLE_ROW_ID);
         int itemNameIndex        = cursor.getColumnIndex(dataManager.TABLE_ROW_ITEM_NAME);
         int itemExpiryDateIndex  = cursor.getColumnIndex(dataManager.TABLE_ROW_EXPIRY_DATE);
@@ -199,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
                 timeDifference = expiryDate.getTime() - currentTimeMillis;
             }
         }
-
         return timeDifference;
     }
 
@@ -213,18 +188,12 @@ public class MainActivity extends AppCompatActivity {
                 // Item is already expired
                 return -1;
             } else if ( timeDifference < tenDaysAgoTimeMillis ) {
-                // Item is expiring before ten days, in this case send the notification
-                // on the expiry date, returning -1, so that the caller knows that
-                // we don't need to send a notificaiton ten days before expiry date.
                 return -1;
             } else {
-                // The ten day before expiry date mark is far, so we would like
-                // to schedule the notification ten days before the expiry date
                 long tenDaysBeforeExpiryDate = expiryDate.getTime() - tenDaysAgoTimeMillis;
                 timeDifference = tenDaysBeforeExpiryDate - currentTimeMillis;
-            }
+            } ///ako rokot na traenje izminuva vo slednite 10 dena stignuva izvestuvanje
         }
-
         return timeDifference;
     }
 

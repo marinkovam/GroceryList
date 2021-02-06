@@ -24,28 +24,17 @@ public class DataManager {
         // Get a writable database
         db = helper.getWritableDatabase();
     }
-    /*
-        Next we have a public static final string for
-        each row/table that we need to refer to both
-        inside and outside this class
-    */
 
+   ///tabela za produktite
     public static final String TABLE_ROW_ID = "_id";
     public static final String TABLE_ROW_ITEM_NAME = "item_name";
     public static final String TABLE_ROW_EXPIRY_DATE = "expiry_date";
     public static final String TABLE_ROW_WHERE_ABOUTS = "where_about";
-
-    /*
-        Next we have a private static final strings for
-        each row/table that we need to refer to just
-        inside this class
-    */
-
     private static final String DB_NAME = "grocery_manager";
     private static final int DB_VERSION = 1;
     private static final String TABLE_ITEMS = "items";
 
-    // Insert a record
+    // dodavanje proizvod
     public long insert(String itemName, String expiryDate, String whereAbouts ) throws SQLException {
         Log.i("assert", "in insert");
         ContentValues contentValues = new ContentValues();
@@ -144,15 +133,11 @@ public class DataManager {
             db.execSQL(newTableQueryString);
         }
 
-        // This method only runs when we increment DB_VERSION
+        // koga kje upgrade-nam bazata
         @Override
         public void onUpgrade(SQLiteDatabase db,
                               int oldVersion, int newVersion) {
-            // Not needed in this app
-            // but we must still override it
-
         }
-
     }
 }
 

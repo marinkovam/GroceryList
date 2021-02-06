@@ -93,20 +93,24 @@
                     </CheckBox>
 
                     <TextView android:textStyle="bold"
-                        android:textColor="#2b463c"
+                        android:textColor="#688f4e"
+                        android:textColorHighlight="#b1d182"
+                        android:textColorLink="#2b463c"
                         android:text="@string/product_name"
                         android:paddingRight="5dp">
                     </TextView>
 
                     <TextView android:textStyle="bold"
-                        android:textColor="#3700B3"
-                        android:textColorHighlight="#3700B3"
+                        android:textColor="#688f4e"
+                        android:textColorHighlight="#b1d182"
                         android:textColorLink="#2b463c"
                         android:text="@string/expiryDateHeader"
                         android:paddingRight="5dp">
                     </TextView>
 
                     <TextView android:textStyle="bold"
+                        android:textColorHighlight="#b1d182"
+                        android:textColorLink="#2b463c"
                         android:textColor="#2b463c"
                         android:text="@string/MarketHeader"
                         android:paddingRight="5dp">

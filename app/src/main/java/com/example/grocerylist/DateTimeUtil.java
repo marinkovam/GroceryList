@@ -62,7 +62,7 @@ public class DateTimeUtil {
         }
         return false;
     }
-
+///proverka za minat datum
     public static boolean isPastDate(Calendar calendar) {
         Calendar now = Calendar.getInstance();
         if ( isToday(now, calendar) )

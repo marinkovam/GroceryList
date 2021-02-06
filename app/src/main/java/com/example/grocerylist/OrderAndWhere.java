@@ -26,7 +26,7 @@ public class OrderAndWhere {
         initializeShowOnlyHash();
         initializeAttributes();
     }
-
+///razlichni nachini na sortiranje
     private void initializeOrderBy() {
         this.orderByHash = new HashMap<>(6);
         this.orderByHash.put((long) 0, DataManager.TABLE_ROW_ITEM_NAME + " ASC");
@@ -84,11 +84,9 @@ public class OrderAndWhere {
     public String getOrderBy() {
         return this.orderBy;
     }
-
     public String getWherePlaceholders() {
         return this.wherePlaceholders;
     }
-
     public String[] getWhereVariables() {
         return this.whereVariables;
     }
