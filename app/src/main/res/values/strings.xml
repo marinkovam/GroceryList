@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">GroceryList</string>
+    <string name="empty_list">Empty list</string>
+    <string name="add_item">Add product</string>
+    <string name="item_name">Product name</string>
+    <string name="expiry_date">Use-by date</string>
+    <string name="save_item">Save Product</string>
+    <string name="cancel_item">Cancel</string>
+    <string name="update_item">Update</string>
+    <string name="whereAbouts">Market</string>
+    <string name="itemHeader">Items</string>
+    <string name="expiryDateHeader">Expiry date</string>
+    <string name="whereAboutsHeader">Market</string>
+    <string-array name="sortBy">
+        <item id="0">↑ Product Name</item>
+        <item id="1">↓ Product Name</item>
+        <item id="2">↑ Use-by Date</item>
+        <item id="3">↓ Use-by Date</item>
+        <item id="4">↑ Market</item>
+        <item id="5">↓ Market</item>
+    </string-array>
+
+    <string-array name="showOnly">
+        <item id="0">Show all products</item>
+        <item id="1">Show only expired products</item>
+        <item id="2">Show only non-expired products</item>
+        <item id="3">Show only soon to be expired products</item>
+    </string-array>
+</resources>

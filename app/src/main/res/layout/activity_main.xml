@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:autofillHints="@string/add_item"
+        android:layout_height="wrap_content">
+
+    </SearchView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/add_item_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:layout_marginLeft="130dp"
+            android:onClick="addItem"
+            app:srcCompat="@drawable/baseline_add_black_36"
+            android:contentDescription="@string/add_item" />
+
+        <ImageButton
+            android:id="@+id/edit_item_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:onClick="editItemOnClick"
+            app:srcCompat="@drawable/baseline_edit_black_36" />
+
+        <ImageButton
+            android:id="@+id/delete_item_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:onClick="deleteItemsOnClick"
+            app:srcCompat="@drawable/baseline_delete_black_36" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinnerSortBy"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:entries="@array/sortBy" />
+
+        <Spinner
+            android:id="@+id/spinnerShowOnly"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:entries="@array/showOnly" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1,2,3"
+                android:id="@+id/items_list">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:paddingRight="5dp"
+                        android:id="@+id/selectAllItems"
+                        android:onClick="selectAllItems">
+                    </CheckBox>
+
+                    <TextView android:textStyle="bold"
+                        android:textColor="#3700B3"
+                        android:text="@string/itemHeader"
+                        android:paddingRight="5dp">
+                    </TextView>
+
+                    <TextView android:textStyle="bold"
+                        android:textColor="#3700B3"
+                        android:textColorHighlight="#3700B3"
+                        android:textColorLink="#3700B3"
+                        android:text="@string/expiryDateHeader"
+                        android:paddingRight="5dp">
+                    </TextView>
+
+                    <TextView android:textStyle="bold"
+                        android:textColor="#3700B3"
+                        android:text="@string/whereAboutsHeader"
+                        android:paddingRight="5dp">
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+</LinearLayout>
