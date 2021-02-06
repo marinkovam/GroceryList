@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.GroceryList" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#6200EE</item>
-        <item name="colorPrimaryVariant">#3700B3</item>
-        <item name="colorOnPrimary">#03DAC5</item>
+        <item name="colorPrimary">#717f35</item>
+        <item name="colorPrimaryVariant">#323b1e</item>
+        <item name="colorOnPrimary">#eef1d9</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#6200EE</item>
-        <item name="colorSecondaryVariant">#3700B3</item>
-        <item name="colorOnSecondary">#03DAC5</item>
+        <item name="colorSecondary">#717f35</item>
+        <item name="colorSecondaryVariant">#323b1e</item>
+        <item name="colorOnSecondary">#eef1d9</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
