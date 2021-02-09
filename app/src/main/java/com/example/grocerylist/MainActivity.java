@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinnerSortBy;
     Spinner spinnerShowOnly;
     DatePickerDialog picker;
+    private Button button;
     String isoDatePattern = "yyyy-MM-dd";
 
     String DUPLICATE_ITEM_ERROR_MESSAGE = "This item already exists.";
@@ -69,12 +70,35 @@ public class MainActivity extends AppCompatActivity {
     String EXPIRY_DATE_STR = "Expiry date";
     String WHEREABOUTS_STR = "Whereabouts";
 
+   /// @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    ////@Override
+    ///protected void onCreate(Bundle savedInstanceState) {
+       /// super.onCreate(savedInstanceState);
+       /// dataManager = new DataManager(this);
+        //initializeListAndSpinners();
+    //}
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dataManager = new DataManager(this);
         initializeListAndSpinners();
+        setContentView(R.layout.activity_main);
+
+
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openIdeasActivity();
+            }
+        });
+    }
+
+    public void openIdeasActivity() {
+        Intent intent = new Intent(this, IdeasActivity.class);
+        startActivity(intent);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)

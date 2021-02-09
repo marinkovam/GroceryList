@@ -44,6 +44,12 @@
             android:onClick="deleteItemsOnClick"
             app:srcCompat="@drawable/baseline_delete_black_36" />
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IDEAS" />
+
     </LinearLayout>
 
     <LinearLayout
