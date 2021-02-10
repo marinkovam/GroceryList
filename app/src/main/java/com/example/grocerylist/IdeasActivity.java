@@ -1,5 +1,4 @@
 package com.example.grocerylist;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,9 +15,10 @@ import java.util.List;
 
 public class IdeasActivity extends AppCompatActivity {
 
-    public static String username;
+
     RecyclerView mRecyclerView;
     MyAdapter mAdapter;
+    char text_id[]={};
     int image_id[] ={R.drawable.fruitsandveggies, R.drawable.dairy, R.drawable.meat, R.drawable.pasta,R.drawable.hygiene, R.drawable.cleaning,R.drawable.alcohol };
 
     @Override
@@ -34,9 +34,6 @@ public class IdeasActivity extends AppCompatActivity {
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mAdapter = new MyAdapter(values, R.layout.activity_my_adapter, this, image_id);
         mRecyclerView.setAdapter(mAdapter);
-    }
-    public static String getUsername() {
-        return username;
     }
 
 }
