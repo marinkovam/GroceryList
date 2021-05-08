@@ -66,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
     String WANT_TO_DELETE_ALL_THE_ITEMS = "Are you sure you want to delete all the items?";
     String YES = "Yes";
     String NO = "NO";
-    String ITEM_NAME_STR = "Item name";
+    String ITEM_NAME_STR = "Product name";
     String EXPIRY_DATE_STR = "Expiry date";
-    String WHEREABOUTS_STR = "Whereabouts";
+    String WHEREABOUTS_STR = "Market";
 
    /// @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     ////@Override
@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
        /// dataManager = new DataManager(this);
         //initializeListAndSpinners();
     //}
+
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override

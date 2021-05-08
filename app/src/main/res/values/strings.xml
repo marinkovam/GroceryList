@@ -11,6 +11,7 @@
     <string name="itemHeader">Items</string>
     <string name="expiryDateHeader">Expiry date</string>
     <string name="MarketHeader">Market</string>
+    <string name="search_for_some_product">search for some product</string>
 
     <string-array name="sortBy">
         <item id="0">↑ Product Name</item>
