@@ -6,8 +6,9 @@
     android:layout_width="wrap_content"
     android:layout_height="650dp"
     android:layout_margin="5dp"
+
     card_view:cardCornerRadius="10dp"
-    card_view:cardBackgroundColor="#c5e1a5"
+    card_view:cardBackgroundColor="#d2dcf4"
     card_view:cardElevation="8dp">
 
     <LinearLayout
@@ -20,11 +21,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textColor="#33691e"
+            android:textColor="#1d3752"
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-
             android:textSize="24sp"
             tools:text="@tools:sample/first_names"/>
 

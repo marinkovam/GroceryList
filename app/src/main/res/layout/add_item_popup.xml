@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#f3deca">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -14,7 +14,7 @@
         android:layout_marginLeft="69dp"
         android:layout_marginEnd="69dp"
         android:layout_marginRight="69dp"
-        android:background="#688f4e"
+        android:background="#0f3b41"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:textColor="#f3deca"
             android:text="@string/product_name"
             app:layout_constraintBottom_toTopOf="@+id/itemName"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:ems="10"
+            android:textColor="#f3deca"
             android:inputType=""
             android:text=""
             app:layout_constraintBottom_toBottomOf="@id/textView5"
@@ -49,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:textColor="#f3deca"
             android:text="@string/expiry_date"
             app:layout_constraintBottom_toTopOf="@+id/expiryDate"
             app:layout_constraintStart_toStartOf="parent" />
@@ -67,6 +70,7 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#f3deca"
             android:layout_marginLeft="10dp"
             android:text="@string/whereAbouts"
             app:layout_constraintBottom_toTopOf="@+id/whereAbouts"
