@@ -70,14 +70,6 @@ public class MainActivity extends AppCompatActivity {
     String EXPIRY_DATE_STR = "Expiry date";
     String WHEREABOUTS_STR = "Market";
 
-   /// @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    ////@Override
-    ///protected void onCreate(Bundle savedInstanceState) {
-       /// super.onCreate(savedInstanceState);
-       /// dataManager = new DataManager(this);
-        //initializeListAndSpinners();
-    //}
-
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
